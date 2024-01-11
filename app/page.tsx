@@ -8,15 +8,15 @@ import { useState } from 'react';
 
 export default function Home() {
   return (
-  <div class="text-center">
-  <nav class="nav justify-content-center">
-    <a class="nav-link active" aria-current="page" href="#">Inbox</a>
-    <a class="nav-link" href="#">Saved</a>
-    <a class="nav-link" href="#">Drafts</a>
-    <a class="nav-link" href="#">Sent</a>
-    <a class="nav-link" href="#">Spam</a>
-    <a class="nav-link" href="#">Deleted</a>
-    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+  <div className="text-center">
+  <nav className="nav justify-content-center">
+    <a className="nav-link active" aria-current="page" href="#">Inbox</a>
+    <a className="nav-link" href="#">Saved</a>
+    <a className="nav-link" href="#">Drafts</a>
+    <a className="nav-link" href="#">Sent</a>
+    <a className="nav-link" href="#">Spam</a>
+    <a className="nav-link" href="#">Deleted</a>
+    <a className="nav-link disabled" aria-disabled="true">Disabled</a>
   </nav>
   </div>)
 }
