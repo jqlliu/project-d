@@ -20,16 +20,16 @@ export default function Home() {
             <a className="nav-link" href="#">Deleted</a>
           </nav>
           <div>
-            <table class="table">
-              <thead>
-                <tr class="table-success">
-                  <td scope="col">From</td>
+            <table class="table table-hover">
+              <thead class="table-success">
+                <tr>
+                  <th scope="col">From</th>
                   <th scope="col">Subject</th>
                   <th scope="col">Preview</th>
                   <th scope="col">Date</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody class="table-group-divider">
                 <tr>
                   <td scope="row">me</td>
                   <th>wait this actually worked???</th>
@@ -44,7 +44,8 @@ export default function Home() {
                 </tr>
                 <tr>
                   <td scope="row">Bob Bobbington</td>
-                  <th colspan="2">hihihihihih</th>
+                  <th>hihihihihih</th>
+                  <td> </td>
                   <td>yooooo</td>
                 </tr>
               </tbody>
