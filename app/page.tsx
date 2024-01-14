@@ -9,31 +9,31 @@ import { useState } from 'react';
 export default function Home() {
   return (
   <div>
-      <h1 align="center">Geo Chat</h1>
+      <h1>Geo Chat</h1>
       <div>
-        <ul class="nav nav-tabs justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inbox</a>
+        <ul className="nav nav-tabs justify-content-center">
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="#">Inbox</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Saved</a>
+          <li className="nav-item">
+            <a className="nav-link" href="#">Saved</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Drafts</a>
+          <li className="nav-item">
+            <a className="nav-link" href="#">Drafts</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sent</a>
+          <li className="nav-item">
+            <a className="nav-link" href="#">Sent</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Spam</a>
+          <li className="nav-item">
+            <a className="nav-link" href="#">Spam</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Deleted</a>
+          <li className="nav-item">
+            <a className="nav-link" href="#">Deleted</a>
           </li>
         </ul>
           <div>
-            <table class="table table-hover">
-              <thead class="table-success">
+            <table className="table table-hover">
+              <thead className="table-success">
                 <tr>
                   <th scope="col">From</th>
                   <th scope="col">Subject</th>
@@ -41,7 +41,7 @@ export default function Home() {
                   <th scope="col">Date</th>
                 </tr>
               </thead>
-              <tbody class="table-group-divider">
+              <tbody className="table-group-divider">
                 <tr>
                   <td scope="row">me</td>
                   <th>wait this actually worked???</th>
