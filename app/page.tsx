@@ -9,7 +9,7 @@ import { useState } from 'react';
 export default function Home() {
   return (
   <div>
-      <h1>Geo Chat</h1>
+      <h1 className = "text-center">Geo Chat</h1>
       <div>
         <ul className="nav nav-tabs justify-content-center">
           <li className="nav-item">
