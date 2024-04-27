@@ -1,3 +1,10 @@
 //The server side!
-import io from "socket.io";
+import {Server} from "socket.io";
 
+const io = new Server({});
+
+io.on("Connection", (socket)=>{
+
+});
+
+io.listen(3000);

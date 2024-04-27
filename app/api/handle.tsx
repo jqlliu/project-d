@@ -21,3 +21,4 @@ function send(responce: NextApiResponse, body: String){
     
     responce.send(body);
 }
+
