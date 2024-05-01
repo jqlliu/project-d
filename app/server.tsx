@@ -1,10 +1,11 @@
 //The server side!
 import {Server} from "socket.io";
-
-const io = new Server({});
-
+import { createServer } from "http";
+const httpServ = createServer();
+const io = new Server(httpServ, {});
+//TODO: Send an event lmao
 io.on("Connection", (socket)=>{
 
 });
 
-io.listen(3000);
+httpServ.listen(3000);
