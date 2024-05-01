@@ -6,10 +6,6 @@ import NavItem from 'react-bootstrap/NavItem';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 
-import {io} from "socket.io-client";
-
-const back = "https://localhost:3000";
-const socket = io(back, {autoConnect: false});
 
 //NOTE TO CAR: Please add a send button and send interface, also make your tavs into seperate functions
 export default function Home() {
