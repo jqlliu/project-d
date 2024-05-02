@@ -12,6 +12,31 @@ export default function Home() {
   return (
   <div>
       <h1 className = "text-center">Geo Chat</h1>
+
+      <div className="d-grid gap-2 col-4 mx-auto">
+        <button type="button" className="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            SEND MESSAGE >:(
+        </button>
+      </div>
+
+      <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledBy="staticBackdropLabel" aria-hidden="true">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div className="modal-body">
+              hi
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" className="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div>
         <ul className="nav nav-tabs justify-content-center">
           <li className="nav-item">
