@@ -15,7 +15,7 @@ export default function Home() {
 
       <div className="d-grid gap-2 col-4 mx-auto">
         <button type="button" className="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            SEND MESSAGE >:(
+            SEND MESSAGE
         </button>
       </div>
 
