@@ -17,8 +17,8 @@ function TopBarItem({children}: React.PropsWithChildren){
   function Col({children}: React.PropsWithChildren){
     return (<th scope="col">{children}</th>)
     }
-function Msg(content: {from: string, subject: string, message: string, date: string}){
-  return(<tr>
+  function Msg(content: {from: string, subject: string, message: string, date: string}){
+   return(<tr>
                   <td scope="row">{content.from}</td>
                   <th>{content.subject}</th>
                   <td>{content.message}</td>
@@ -88,122 +88,7 @@ export default function Home() {
                   <td>no way</td>
                   <td>today</td>
                 </tr> */}
-                <Msg { ...{from: "BLEHH", subject:"GAHHHH", message: "BARRRHH", date: "NAYYY"
-                 }}></Msg>
-                <tr>
-                  <td scope="row">Bob Bobbington</td>
-                  <th>hihihihihih</th>
-                  <td> </td>
-                  <td>yooooo</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
-                <tr>
-                  <td scope="row">a</td>
-                  <th>b</th>
-                  <td>c</td>
-                  <td>d</td>
-                </tr>
+                <Msg { ...{from: "BLEHH", subject:"GAHHHH", message: "BARRRHH", date: "NAYYY"}}></Msg>
               </tbody>
             </table>
           </div>
