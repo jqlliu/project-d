@@ -8,11 +8,13 @@ import { Children, useState } from 'react';
 
 //Example of hook or smthing
 
-function TopBarItem({ children }: React.PropsWithChildren) {
-  return (<li className="nav-item">
-    <a className="nav-link" href="#" >{children}</a>
+function TopBarItem(content: {children: string, active: boolean}) {
+  return (<li className= "nav-item" >
+    <a className= {"nav-link"  + (content.active?" active":"")} href="#" >{content.children}</a>
   </li>)
+  
 }
+
 
 function Col({ children }: React.PropsWithChildren) {
   return (<th scope="col">{children}</th>)
@@ -38,7 +40,7 @@ export default function Home() {
         </button>
       </div>
 
-      <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledBy="staticBackdropLabel" aria-hidden="true">
+      <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
@@ -58,18 +60,15 @@ export default function Home() {
 
       <div>
         <ul className="nav nav-tabs justify-content-center">
-          <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">Inbox</a>
-          </li>
           {//Please do this in the future
             //Clean! Code! Yay!
             //
           }
-          <TopBarItem>Saved</TopBarItem>
-          <TopBarItem>Draft</TopBarItem>
-          <TopBarItem>Sent</TopBarItem>
-          <TopBarItem>Spam</TopBarItem>
-          <TopBarItem>Deleted</TopBarItem>
+          <TopBarItem active = {true}>Saved</TopBarItem>
+          <TopBarItem active = {false}>Draft</TopBarItem>
+          <TopBarItem active = {false}>Sent</TopBarItem>
+          <TopBarItem active = {false}>Spam</TopBarItem>
+          <TopBarItem active = {false}>Deleted</TopBarItem>
         </ul>
         <div>
           <table className="table table-hover">
@@ -82,12 +81,6 @@ export default function Home() {
               </tr>
             </thead>
             <tbody className="table-group-divider">
-              {/* <tr>
-                  <td scope="row">me</td>
-                  <th>wait this actually worked???</th>
-                  <td>no way</td>
-                  <td>today</td>
-                </tr> */}
               <Msg {...{ from: "BLEHH", subject: "GAHHHH", message: "BARRRHH", date: "NAYYY" }}></Msg>
             </tbody>
           </table>
