@@ -4,9 +4,18 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavItem from 'react-bootstrap/NavItem';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
+import { Children, useState } from 'react';
 
+//Example of hook or smthing
+function BarItem({children}: React.PropsWithChildren){
+return (<th scope="col">{children}</th>)
+}
 
+function Col({children}: React.PropsWithChildren){
+  return (<li className="nav-item">
+              <a className="nav-link" href="#" >{children}</a>
+            </li>)
+  }
 //NOTE TO CAR: Please add a send button and send interface, also make your tavs into seperate functions
 export default function Home() {
   return (
@@ -19,12 +28,12 @@ export default function Home() {
         </button>
       </div>
 
-      <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledBy="staticBackdropLabel" aria-hidden="true">
+      <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledBy="staticBackdropLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
               <h1 className="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
               hi
@@ -42,30 +51,23 @@ export default function Home() {
           <li className="nav-item">
             <a className="nav-link active" aria-current="page" href="#">Inbox</a>
           </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Saved</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Drafts</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Sent</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Spam</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Deleted</a>
-          </li>
+          {//Please do this in the future
+          //Clean! 
+          }
+          <BarItem>Saved</BarItem>
+          <BarItem>Draft</BarItem>
+          <BarItem>Sent</BarItem>
+          <BarItem>Spam</BarItem>
+          <BarItem>Deleted</BarItem>
         </ul>
           <div>
             <table className="table table-hover">
               <thead className="table-success">
                 <tr>
-                  <th scope="col">From</th>
-                  <th scope="col">Subject</th>
-                  <th scope="col">Preview</th>
-                  <th scope="col">Date</th>
+                  <Col>From</Col>
+                  <Col>Subject</Col>
+                  <Col>Preview</Col>
+                  <Col>Date</Col>
                 </tr>
               </thead>
               <tbody className="table-group-divider">
