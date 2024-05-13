@@ -7,16 +7,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Children, useState } from 'react';
 
 //Example of hook or smthing
-function BarItem({children}: React.PropsWithChildren){
-return (<th scope="col">{children}</th>)
-}
 
-function Col({children}: React.PropsWithChildren){
+function TopBarItem({children}: React.PropsWithChildren){
   return (<li className="nav-item">
               <a className="nav-link" href="#" >{children}</a>
             </li>)
   }
+
+  function Col({children}: React.PropsWithChildren){
+    return (<th scope="col">{children}</th>)
+    }
+function Msg(content: {from: string, subject: string, message: string, date: string}){
+  return(<tr>
+                  <td scope="row">{content.from}</td>
+                  <th>{content.subject}</th>
+                  <td>{content.message}</td>
+                  <td>{content.date}</td>
+                </tr>)
+}
 //NOTE TO CAR: Please add a send button and send interface, also make your tavs into seperate functions
+//Sending missiles to iraq
 export default function Home() {
   return (
   <div>
@@ -52,13 +62,14 @@ export default function Home() {
             <a className="nav-link active" aria-current="page" href="#">Inbox</a>
           </li>
           {//Please do this in the future
-          //Clean! 
+          //Clean! Code! Yay!
+          //
           }
-          <BarItem>Saved</BarItem>
-          <BarItem>Draft</BarItem>
-          <BarItem>Sent</BarItem>
-          <BarItem>Spam</BarItem>
-          <BarItem>Deleted</BarItem>
+          <TopBarItem>Saved</TopBarItem>
+          <TopBarItem>Draft</TopBarItem>
+          <TopBarItem>Sent</TopBarItem>
+          <TopBarItem>Spam</TopBarItem>
+          <TopBarItem>Deleted</TopBarItem>
         </ul>
           <div>
             <table className="table table-hover">
@@ -71,18 +82,14 @@ export default function Home() {
                 </tr>
               </thead>
               <tbody className="table-group-divider">
-                <tr>
+                {/* <tr>
                   <td scope="row">me</td>
                   <th>wait this actually worked???</th>
                   <td>no way</td>
                   <td>today</td>
-                </tr>
-                <tr>
-                  <td scope="row">you</td>
-                  <th>some other stuff</th>
-                  <td>woah cool blah blah I also changed the colour wow</td>
-                  <td>Jan 13</td>
-                </tr>
+                </tr> */}
+                <Msg { ...{from: "BLEHH", subject:"GAHHHH", message: "BARRRHH", date: "NAYYY"
+                 }}></Msg>
                 <tr>
                   <td scope="row">Bob Bobbington</td>
                   <th>hihihihihih</th>
