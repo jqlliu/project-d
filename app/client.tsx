@@ -10,3 +10,8 @@ export default socket;
 export function sendMail(){
 
 }
+
+
+socket.on("Message", (message)=>{
+    console.log(message);
+});

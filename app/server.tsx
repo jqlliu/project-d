@@ -11,7 +11,8 @@ const io = new Server(httpServ, {
 
 
 io.on("Connection", (socket)=>{
-    
+    console.log("IANSDUIASIUDn");
+    socket.emit("Message", "HULLO");
 });
 
 httpServ.listen(3000);

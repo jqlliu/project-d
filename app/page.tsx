@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import NavItem from 'react-bootstrap/NavItem';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Children, useState } from 'react';
+import socket from './client';
 
 //Example of hook or smthing
 
@@ -27,11 +28,13 @@ function Msg(content: { from: string, subject: string, message: string, date: st
     <td>{content.date}</td>
   </tr>)
 }
+
 //NOTE TO CAR: Please add a send button and send interface, also make your tavs into seperate functions
-//Sending missiles to iraq
 export default function Home() {
   return (
-    <div>
+    <div 
+    // onLoad = {e => {socket.connect();}}
+    >
       <h1 className="text-center">Geo Chat</h1>
 
       <div className="d-grid gap-2 col-4 mx-auto">
@@ -39,7 +42,9 @@ export default function Home() {
           SEND MESSAGE
         </button>
       </div>
-{/* 
+{
+//Redo this later please
+/* 
       <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
