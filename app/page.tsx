@@ -9,6 +9,13 @@ import socket from './client';
 
 //Example of hook or smthing
 
+//NOTICE:
+//REMEMBER TO SWITCH FROM BS TO TAILWIND CSS
+//ITS BETTER IT HINK LMAO
+//
+
+
+
 function TopBarItem(content: {children: string, active: boolean}) {
   return (<li className= "nav-item" >
     <a className= {"nav-link"  + (content.active?" active":"")} href="#" >{content.children}</a>
